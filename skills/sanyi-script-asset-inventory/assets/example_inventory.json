@@ -1,0 +1,409 @@
+{
+  "meta": {
+    "schema_version": "1.3",
+    "title": "示例：雨巷茶馆（虚构，仅供结构参考）",
+    "report_version": "1.0",
+    "mode": "full",
+    "provisional": false,
+    "source_scope": "第1—4集定稿正文（示例）",
+    "source_files": [
+      "示例正文.md"
+    ],
+    "generated_date": "2026-10-10",
+    "scene_index": [
+      "E01-1",
+      "E01-2",
+      "E02-1",
+      "E03-1",
+      "E03-2",
+      "E04-1"
+    ],
+    "naming_registry": [
+      {
+        "canonical": "茶博士",
+        "aliases": [
+          "掌柜"
+        ],
+        "banned": [
+          "伙计头"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "char-teamaster",
+      "name": "茶博士",
+      "tier": "主角",
+      "first_seen": "E01-1",
+      "source_refs": [
+        "E01-1",
+        "E02-1",
+        "E04-1"
+      ],
+      "visible_anchors": [
+        "正文写明的青布长衫",
+        {
+          "text": "左手腕旧烫痕",
+          "visibility": "conditional",
+          "visible_when": "仅 E03 倒茶特写可见；其他镜头袖口遮住"
+        }
+      ],
+      "state_variants": [],
+      "production_states": [
+        {
+          "id": "char-teamaster-rain",
+          "name": "雨夜蓑衣",
+          "source_refs": [
+            "E03-1",
+            "E04-1"
+          ],
+          "wardrobe": [
+            "蓑衣",
+            "斗笠"
+          ],
+          "hair_makeup_or_cover": [
+            "斗笠压低遮脸"
+          ],
+          "damage_or_soiling": [
+            "衣摆潮湿"
+          ],
+          "effects_or_visibility": [],
+          "change_trigger": "E03 出门寻人后到 E04 回馆前保持",
+          "needs_confirmation": []
+        }
+      ],
+      "continuity_notes": [
+        "烫痕除 E03 特写外，其他镜头不得露出"
+      ],
+      "gates": [
+        "R"
+      ],
+      "gate_reasons": {
+        "R": "跨四集出场，服装与脸需固定"
+      },
+      "deliverable_spec": {
+        "forms": [
+          "character_sheet",
+          "form_sheet"
+        ],
+        "must_include": [
+          "青布长衫基型",
+          "雨夜蓑衣状态对照"
+        ],
+        "weight": "full"
+      },
+      "needs_confirmation": [
+        "长衫颜色深浅"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-teahouse",
+      "name": "雨巷茶馆（堂屋＋后院）",
+      "first_seen": "E01-1",
+      "source_refs": [
+        "E01-1",
+        "E02-1",
+        "E03-2"
+      ],
+      "visible_anchors": [
+        "门口木招牌",
+        "靠窗长桌",
+        "通往后院的布帘",
+        "后院水缸"
+      ],
+      "state_variants": [
+        {
+          "name": "雨夜",
+          "details": "正文写明灯笼点亮、屋檐滴水",
+          "source_refs": [
+            "E03-2"
+          ]
+        }
+      ],
+      "continuity_notes": [
+        "布帘位置在堂屋左侧，E01 与 E03 方位一致"
+      ],
+      "gates": [
+        "R",
+        "D"
+      ],
+      "gate_reasons": {
+        "R": "跨三集回访",
+        "D": "堂屋与后院的相互方位、布帘与水缸位置，多机位易前后颠倒"
+      },
+      "deliverable_spec": {
+        "forms": [
+          "space_plan"
+        ],
+        "must_include": [
+          "堂屋与后院的相互方位",
+          "布帘位置",
+          "水缸位置"
+        ],
+        "weight": "full"
+      },
+      "generation_risk": {
+        "types": [
+          "S"
+        ],
+        "failure_mode": "后院水缸与布帘的左右位置在不同镜头里互换"
+      },
+      "needs_confirmation": []
+    }
+  ],
+  "props": [
+    {
+      "id": "prop-note",
+      "name": "账本里夹的字条",
+      "asset_type": "版式包",
+      "first_seen": "E02-1",
+      "source_refs": [
+        "E02-1",
+        "E04-1"
+      ],
+      "visible_anchors": [
+        "正文写明三行手写字",
+        "右下角红色指印"
+      ],
+      "state_variants": [],
+      "continuity_notes": [
+        "两张字条的字数、行序、指印位置必须可比对"
+      ],
+      "gates": [
+        "E",
+        "D"
+      ],
+      "gate_reasons": {
+        "E": "E02 与 E04 两处比对笔迹与指印位置",
+        "D": "手写小字与指印位置，模型易出乱码或位置漂移"
+      },
+      "deliverable_spec": {
+        "forms": [
+          "layout_pages",
+          "evidence_sheet"
+        ],
+        "must_include": [
+          "三行文字的固定内容",
+          "右下角指印位置",
+          "两张字条的并排对照页"
+        ],
+        "weight": "full"
+      },
+      "generation_risk": {
+        "types": [
+          "T"
+        ],
+        "failure_mode": "三行手写字生成为乱码或字数不一致，两张字条的指印位置不同"
+      },
+      "needs_confirmation": [
+        "字条的具体文字内容"
+      ]
+    },
+    {
+      "id": "prop-bill",
+      "name": "E03 一次性账单特写",
+      "asset_type": "版式包",
+      "first_seen": "E03-1",
+      "source_refs": [
+        "E03-1"
+      ],
+      "visible_anchors": [
+        "表格式账单，五行数字"
+      ],
+      "state_variants": [],
+      "continuity_notes": [],
+      "gates": [
+        "D"
+      ],
+      "gate_reasons": {
+        "D": "表格数字被特写并被角色逐行念出，文字必须对得上"
+      },
+      "deliverable_spec": {
+        "forms": [
+          "layout_pages"
+        ],
+        "must_include": [
+          "五行数字与台词一致"
+        ],
+        "weight": "light"
+      },
+      "generation_risk": {
+        "types": [
+          "T"
+        ],
+        "failure_mode": "数字与台词不一致或出现乱码"
+      },
+      "needs_confirmation": []
+    }
+  ],
+  "selection_policy": [
+    "通过 R 复用门、E 证据门或 D 难生成门任一门即入主清单，并注明是哪一门。",
+    "D 门必须属于类型表并写得出具体失败表现；重要、特写一次、导演在意都不是理由。",
+    "单次虚弱、吐血、淤青、普通手持物和一次性特写默认镜头内生成。"
+  ],
+  "non_prebuilt": [
+    {
+      "item": "E02 客人的茶杯",
+      "tier": "镜头内生成",
+      "reason": "普通手持物，仅一场出现，无后续比对",
+      "source_refs": [
+        "E02-1"
+      ],
+      "revisit_when": "若后续有人要比对杯底印记则重评"
+    },
+    {
+      "item": "E01 雨声与屋檐滴水",
+      "tier": "镜头内生成",
+      "reason": "过场环境效果，不是可复用资产",
+      "source_refs": [
+        "E01-2"
+      ]
+    }
+  ],
+  "episode_assets": [
+    {
+      "episode": "E01",
+      "new_characters": [
+        "char-teamaster"
+      ],
+      "new_scenes": [
+        "scene-teahouse"
+      ],
+      "new_props": [],
+      "source_refs": [
+        "E01-1"
+      ]
+    },
+    {
+      "episode": "E02",
+      "new_characters": [],
+      "new_scenes": [],
+      "new_props": [
+        "prop-note"
+      ],
+      "source_refs": [
+        "E02-1"
+      ]
+    },
+    {
+      "episode": "E03",
+      "new_characters": [],
+      "new_scenes": [],
+      "new_props": [
+        "prop-bill"
+      ],
+      "source_refs": [
+        "E03-1"
+      ]
+    }
+  ],
+  "continuity_checks": [
+    {
+      "severity": "待确认",
+      "category": "文字版式",
+      "item": "账本里夹的字条",
+      "issue": "E02 与 E04 正文都写“三行字”，但没有写字条的具体内容。",
+      "source_refs": [
+        "E02-1",
+        "E04-1"
+      ],
+      "minimum_action": "由编剧给出三行字的固定文字，再做版式页。"
+    }
+  ],
+  "delta": {},
+  "audio_plan": {
+    "voice_direction": [
+      {
+        "character_id": "char-teamaster",
+        "name": "茶博士",
+        "role_tier": "主角",
+        "source_refs": [
+          "E01-1",
+          "E03-1"
+        ],
+        "voice_profile": [
+          "中低音，语速平稳，带一点倦意"
+        ],
+        "state_switches": [
+          "堂屋待客（E01-1）：温和、慢；雨夜外出（E03-1）：压低、更短促"
+        ],
+        "avoid": [
+          "全程说书腔"
+        ],
+        "needs_confirmation": []
+      },
+      {
+        "name": "雨巷茶客（群声）",
+        "role_tier": "群声",
+        "source_refs": [
+          "E02-1"
+        ],
+        "voice_profile": [
+          "低声交谈的混合人声，听不清具体内容"
+        ],
+        "state_switches": [],
+        "avoid": [
+          "字句清晰盖过主角台词"
+        ],
+        "needs_confirmation": []
+      }
+    ],
+    "bgm_library": [
+      {
+        "id": "bgm-teahouse",
+        "name": "茶馆日常",
+        "recurrence": "固定主题",
+        "scene_ids": [
+          "scene-teahouse"
+        ],
+        "applies_to": [],
+        "source_refs": [
+          "E01-1",
+          "E02-1"
+        ],
+        "purpose": "堂屋场景的日常底色，整季固定同一首",
+        "music_profile": [
+          "古筝或琵琶轻拨，疏朗",
+          "60–72 BPM 体感"
+        ],
+        "entry_exit": [
+          "推门入堂屋时渐入",
+          "出现关键线索台词时撤到只剩雨声"
+        ],
+        "avoid": [
+          "过于喜庆的民乐",
+          "盖住字条内容的台词"
+        ],
+        "needs_confirmation": []
+      }
+    ],
+    "cue_sheet": [
+      {
+        "episodes": "E01—E02",
+        "scene": "堂屋",
+        "bgm_id": "bgm-teahouse",
+        "source_refs": [
+          "E01-1"
+        ],
+        "cue": "开场进入，发现字条时撤出",
+        "sound_design": "雨声、茶具轻响",
+        "purpose": "建立场所气质"
+      },
+      {
+        "episodes": "E03",
+        "scene": "雨夜出门",
+        "bgm_id": "",
+        "source_refs": [
+          "E03-1"
+        ],
+        "cue": "不配乐",
+        "sound_design": "雨声、脚步、蓑衣摩擦",
+        "purpose": "用环境声制造紧张"
+      }
+    ],
+    "audio_checks": []
+  }
+}

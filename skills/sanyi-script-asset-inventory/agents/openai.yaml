@@ -1,0 +1,3 @@
+interface:
+  display_name: "三义剧本制作前整理"
+  short_description: "按复用、证据比对、难生成三道门筛选预制资产，生成资产清单与声音清单 HTML，支持增量与预研"
